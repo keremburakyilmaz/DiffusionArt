@@ -10,8 +10,8 @@ def main():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     
     # Initialize datasets and dataloaders
-    content_dataset = ContentDataset(root_dir="path/to/content_images", transform=transform)
-    style_dataset = StyleDataset(root_dir="path/to/style_images", transform=transform)
+    content_dataset = ContentDataset(root_dir="raw_images\content", transform=transform)
+    style_dataset = StyleDataset(root_dir="raw_images\style", transform=transform)
     
     # Split datasets
     content_train_size = int(0.8 * len(content_dataset))
